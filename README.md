@@ -17,14 +17,14 @@ Below is a list of everything you should see if you do a diff on the outputted b
 * Stylus stacks multiple selectors instead of placing them on one line:
 	* Instead of `audio, canvas, video` you get
 		```
-		audio,
-		canvas,
+		audio,\n
+		canvas,\n
 		video
 		```
 * Stylus minimizes the length of colors, so it outputs #333 instead of #333333.
 * Stylus only has 2 decimal precision so where the official css has 0.075, Stylus outputs 0.07 and for 0.025, stylus outputs 0.03 (why it rounds up in one place and not in another is a mystery to me).  It also adds an extraneous 0 when only one decimal place is need (0.2 is output as 0.20).
-* Stylus adds quotations marks around `url`s, so `background-image: url(../img/glyphicons-halflings.png)` becomes `background-image: url("../img/glyphicons-halflings.png")`
-* Stylus removes spaces between values in `rgba`s, so `rgba(0, 0, 0, 0.2)` becomes `rgba(0,0,0,0.20)`.
+* Stylus adds quotations marks around `url`, so `background-image: url(../img/glyphicons-halflings.png)` becomes `background-image: url("../img/glyphicons-halflings.png")`
+* Stylus removes spaces between values in `rgba`, so `rgba(0, 0, 0, 0.2)` becomes `rgba(0,0,0,0.20)`.
 * Stylus automatically adds vendor prefixes, which corrected an error in the official Less version where in `.dropdown-menu`, `-moz-background-clip` was set to `padding` instead of `padding-box`.
 * Stylus enables calling mixins transparently (e.g. `opacity: 1` is the same as `opacity(1)` if there is a mixin named `opacity`).  In the official Less files, there is a mixin named `opacity` but they did not use it everywhere they set opacity.  So in the output from Stylus, you will see an additional `filter: alpha(opacity=0)` or similar in some places.
 * On `.alert`, the border color is slightly different due to a difference in the `spin` function in Stylus vs. the one on Less.  so it outputs as `#fbefd5` instead of `#fbeed5`.  I decided the difference was not great enough to warrent trying to rewrite the `spin` function.
@@ -33,6 +33,7 @@ Below is a list of everything you should see if you do a diff on the outputted b
 
 And that's it!  I have included the rendered css files so you can run your own diff and check, if you like before you try using this.
 
+The official minimized bootstrap.min.css is 71.5kb while the minimized version from Stylus is 69.8kb.  This is due to leaving off the final semicolon in style definitions (although sometimes it is there?), removing the spaces in `rgba` and using the short form of hex colors.
 
 ## How to use
 
@@ -45,6 +46,8 @@ $ npm install stylus
 Next, download the project.
 ```bash
 $ git clone git://github.com/flowonyx/bootstrap-h5bp-stylus.git
+```
+```bash
 $ cd bootstrap-h5bp-stylus
 ```
 
