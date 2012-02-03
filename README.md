@@ -87,7 +87,7 @@ I certainly hope this is helpful to somebody.  It was an interesting exercise an
 
 Copyright and license for any changes made
 ------------------------------------------
-Anything added/changed, etc. which does not fall under the licensing of HTML5 Boilerplate or Twitter Bootstrap is realeased to the Public Domain.
+Anything added/changed, etc. which does not fall under the licensing of HTML5 Boilerplate or Twitter Bootstrap is released to the Public Domain.
 
 Copyright and license for HTML5 Boilerplate
 -------------------------------------------
