@@ -44,9 +44,11 @@ $ npm install stylus
 ```
 
 Next, download the project.
+
 ```bash
 $ git clone git://github.com/flowonyx/bootstrap-h5bp-stylus.git
 ```
+
 ```bash
 $ cd bootstrap-h5bp-stylus
 ```
