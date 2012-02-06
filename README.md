@@ -16,11 +16,11 @@ Below is a list of everything you should see if you do a diff on the outputted b
 
 * Stylus stacks multiple selectors instead of placing them on one line:
 	* Instead of `audio, canvas, video` you get
-		```
-		audio,\n
-		canvas,\n
-		video
-		```
+
+audio,
+canvas,
+video
+
 * Stylus minimizes the length of colors, so it outputs #333 instead of #333333.
 * Stylus only has 2 decimal precision so where the official css has 0.075, Stylus outputs 0.07 and for 0.025, stylus outputs 0.03 (why it rounds up in one place and not in another is a mystery to me).  It also adds an extraneous 0 when only one decimal place is need (0.2 is output as 0.20).
 * Stylus adds quotations marks around `url`, so `background-image: url(../img/glyphicons-halflings.png)` becomes `background-image: url("../img/glyphicons-halflings.png")`
