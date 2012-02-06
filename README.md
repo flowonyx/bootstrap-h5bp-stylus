@@ -1,4 +1,4 @@
-#Twitter Bootstrap 2.0 with HTML5 Boilerplate styles ported to Stylus
+#Twitter Bootstrap 2.0 with HTML5 Boilerplate 3.0 styles ported to Stylus
 
 Sorry I couldn't think up a cool name.  It is what it is. :)
 

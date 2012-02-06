@@ -13,14 +13,25 @@ label
 
 legend
 	*margin-left: -7px
+	white-space: normal
 
 /*
- * Reintroduce inner spacing in 'table' to avoid overlap and whitespace issues in IE6/7
- */
+* 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
+*/
 
-table button,
-table input
-	*overflow: auto
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"]
+	*overflow: visible
+
+/*
+* Re-set default cursor for disabled elements
+*/
+
+button[disabled],
+input[disabled]
+	cursor: default
 
 /*
  * Consistent box sizing and appearance
@@ -29,6 +40,9 @@ table input
 input[type="checkbox"],
 input[type="radio"]
 	box-sizing: border-box
+	padding: 0
+	*width: 13px
+	*height: 13px
 
 /*
  * Allow only vertical resizing
