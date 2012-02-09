@@ -25,6 +25,7 @@ Below is a list of everything you should see if you do a diff on the outputted b
 * On `.alert`, the border color is slightly different due to a difference in the `spin` function in Stylus vs. the one on Less.  so it outputs as `#fbefd5` instead of `#fbeed5`.  I decided the difference was not great enough to warrent trying to rewrite the `spin` function.
 * Apparently, my `darken` function for Less compatability is not perfect, because `.btn-navbar:active...` has `background-color: #090909` instead of `#080808`.
 * @keyframes is handled differently in Stylus.  It changes `from` to `0%` and `to` to `100%` which they claim is the official syntax (I haven't checked).  It also adds vendor prefixes for Opera and IE.  I assume due to a bug, these are all output at the end of rendering `progress-bars.styl`.  This should not change the semantics at all.
+* I added `-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=$opacity)` to the `opacity` mixin to support IE8 (http://www.quirksmode.org/css/opacity.html).
 
 And that's it!  I have included the rendered css files so you can run your own diff and check, if you like before you try using this.
 
