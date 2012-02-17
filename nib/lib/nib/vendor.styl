@@ -37,28 +37,28 @@ vendor-value(arg)
  */
 
 box-shadow()
-  vendor('box-shadow', arguments)
+  vendor('box-shadow', arguments, ignore: ms o)
 
 /*
  * Vendor "user-size" support.
  */
 
 user-select()
-  vendor('user-select', arguments)
+  vendor('user-select', arguments, ignore: ms)
 
 /*
  * Vendor "column-count" support.
  */
 
 column-count()
-  vendor('column-count', arguments)
+  vendor('column-count', arguments, ignore: ms o)
 
 /*
  * Vendor "column-gap" support.
  */
 
 column-gap()
-  vendor('column-gap', arguments)
+  vendor('column-gap', arguments, ignore: ms o)
 
 /*
  * Vendor "column-rule" support.
@@ -100,7 +100,7 @@ column-width()
  */
 
 background-size()
-  vendor('background-size', arguments)
+  vendor('background-size', arguments, ignore: ms)
 
 /*
  * Vendor "transform" support.
@@ -183,10 +183,13 @@ perspective()
  * Opacity with conditional IE support.
  */
 
-opacity(n)
+opacity(n = 1)
   opacity: n
   if support-for-ie
-    filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=%s)' % round(n * 100)
+    // [flowonyx] Support IE8 - http://www.quirksmode.org/css/opacity.html
+    -ms-filter: s("progid:DXImageTransform.Microsoft.Alpha(Opacity=%s)", round(n * 100))
+    // Support IE5-7 - http://www.quirksmode.org/css/opacity.html
+    filter: s("alpha(opacity=%s)", round(n * 100))
 
 /*
  * Alias the "white-space" property.
@@ -200,7 +203,7 @@ whitespace()
  */
 
 box-sizing()
-  vendor('box-sizing', arguments)
+  vendor('box-sizing', arguments, ignore: ms o)
 
 /*
  * Vendor "box-orient" support.
@@ -249,7 +252,7 @@ box-direction()
  */
 
 animation()
-  vendor('animation', arguments)
+  vendor('animation', arguments, ignore: ms o)
 
 
 /*
@@ -331,6 +334,14 @@ appearance()
   vendor('appearance', arguments)
 
 /*
+ * Vendor "background-clip" support.
+ */
+// Heads up: FF 3.6 and under need "padding" instead of "padding-box"
+
+background-clip()
+  vendor("background-clip", arguments, ignore: ms o)
+
+/*
  * Helper for border-radius().
  */
 
@@ -380,5 +391,5 @@ border-radius()
         if augmented
           -apply-border-radius(pos)
           pos = ()
-  vendor('border-radius', pos) unless augmented
+  vendor('border-radius', pos, ignore: ms o) unless augmented
 
