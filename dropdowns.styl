@@ -26,7 +26,7 @@
   border-left:  4px solid transparent
   border-right: 4px solid transparent
   border-top:   4px solid $black
-  opacity(30)
+  opacity(.30)
   content: "\2193"
 
 .dropdown .caret
@@ -35,7 +35,7 @@
 
 .dropdown:hover .caret,
 .open.dropdown .caret
-  opacity(100)
+  opacity(1)
 
 // The dropdown menu (ul)
 .dropdown-menu
@@ -46,7 +46,6 @@
   float: left
   display: none // none by default, but block on "open" of the menu
   min-width: 160px
-  max-width: 220px
   _width: 160px
   padding: 4px 0
   margin: 0 // override default ul
@@ -89,7 +88,7 @@
     padding: 3px 15px
     clear: both
     font-weight: normal
-    line-height: 18px
+    line-height: $baseLineHeight
     color: $gray
     white-space: nowrap
 

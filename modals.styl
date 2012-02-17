@@ -1,6 +1,7 @@
 // MODALS
 // ------
 
+// Recalculate z-index where appropriate
 .modal-open
   .dropdown-menu
     z-index: $zindexDropdown + $zindexModal
@@ -12,6 +13,7 @@
     z-index: $zindexTooltip  + $zindexModal
 
 
+// Background
 .modal-backdrop
   position: fixed
   top: 0
@@ -24,12 +26,11 @@
   &.fade
     opacity: 0
 
-
 .modal-backdrop,
 .modal-backdrop.fade.in
-  opacity(80)
+  opacity(.80)
 
-
+// Base modal
 .modal
   position: fixed
   top: 50%
@@ -60,9 +61,15 @@
   .close
     margin-top: 2px
 
+// Body (where all modal content resides)
 .modal-body
   padding: 15px
 
+// Remove bottom margin if need be
+.modal-body .modal-form
+  margin-bottom: 0
+
+// Footer (for actions)
 .modal-footer
   padding: 14px 15px 15px
   margin-bottom: 0

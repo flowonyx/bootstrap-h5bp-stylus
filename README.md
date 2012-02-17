@@ -1,8 +1,6 @@
-#Twitter Bootstrap 2.0 with HTML5 Boilerplate 3.0 styles ported to Stylus
+#Twitter Bootstrap 2.0.1 with HTML5 Boilerplate 3.0 styles ported to Stylus
 
-Sorry I couldn't think up a cool name.  It is what it is. :)
-
-All the credit goes to the [Twitter Bootstrap](https://github.com/twitter/bootstrap) and [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate) guys and gals.
+All the credit goes to the [Twitter Bootstrap](https://github.com/twitter/bootstrap) and [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate) guys and gals as well as @visionmedia for [nib](https://github.com/visionmedia/nib).
 
 ## What is it?
 
@@ -10,9 +8,11 @@ If you haven't already, go read about [Twitter Bootstrap](http://twitter.github.
 
 This project only uses the css portion of HTML5 Boilerplate.  Since both Twitter Bootstrap 2.0 and HTML5 Boilerplate include/are based on [normalize.css](https://github.com/necolas/normalize.css/), there is a lot of overlap, but Bootstrap does not include everything.  I have included here only the parts of HTML5 Boilerplate that I saw were missing in Bootstrap.
 
-## Changes in final CSS from the official Twitter Bootstrap 2.0
+This project also now includes a customized version of [nib](https://github.com/visionmedia/nib) so all the goodness of nib is automatically available for your custom styles.  The reason it is a customized version is to bring its output more in line with Twitter Bootstrap's output.  Everything still works the same, only some of the `vendor` mixins now only output for the vendors that have actually implemented those prefixed styles.
 
-Below is a list of everything you should see if you do a diff on the outputted bootstrap.css and the official version.  Most of the changes in the css make no semantic difference, although some do.
+## Changes in final CSS from the official Twitter Bootstrap 2.0.1
+
+Below used to be a list of everything you should see if you do a diff on the outputted bootstrap.css and the official version.  Since updating to use `nib`, this is not entirely accurate, but it will give you an idea of the differences.  Most of the changes in the css make no semantic difference, although some do.
 
 * Stylus stacks multiple selectors instead of placing them on one line:
 	* Instead of `audio, canvas, video` on one line, you get them on three lines.
@@ -85,14 +85,14 @@ I certainly hope this is helpful to somebody.  It was an interesting exercise an
 
 Copyright and license for any changes made
 ------------------------------------------
-Anything added/changed, etc. which does not fall under the licensing of HTML5 Boilerplate or Twitter Bootstrap 2.0 is released to the Public Domain.
+Anything added/changed, etc. which does not fall under the licensing of HTML5 Boilerplate or Twitter Bootstrap 2.0.1 is released to the Public Domain.
 
 Copyright and license for HTML5 Boilerplate
 -------------------------------------------
 The parts included here are released to the Public Domain.
 
-Copyright and license for Twitter Bootstrap 2.0
------------------------------------------------
+Copyright and license for Twitter Bootstrap 2.0.1
+-------------------------------------------------
 
 Copyright 2012 Twitter, Inc.
 
@@ -108,9 +108,9 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-Glyphicons use in Twitter Bootstrap 2.0
----------------------------------------
+Glyphicons use in Twitter Bootstrap 2.0.1
+-----------------------------------------
 
-From the Twitter Bootstrap 2.0 docs:
+From the Twitter Bootstrap 2.0.1 docs:
 
 [Glyphicons](http://glyphicons.com/) has granted us use of the Halflings set in our open-source toolkit so long as we provide a link and credit here in the docs. Please consider doing the same in your projects.
