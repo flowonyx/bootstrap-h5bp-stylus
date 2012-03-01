@@ -18,17 +18,17 @@
   display: none;
 }
 ::-moz-selection {
-  background: $selectionBackground;
-  color: $selectionText;
+  background: #fe57a1;
+  color: #fff;
   text-shadow: none;
 }
 ::selection {
-  background: $selectionBackground;
-  color: $selectionText;
+  background: #fe57a1;
+  color: #fff;
   text-shadow: none;
 }
 a:visited {
-  color: $linkColorVisited;
+  color: #551a8b;
 }
 b {
   font-weight: bold;
@@ -40,18 +40,18 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid $hrColor;
+  border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0;
 }
 ins {
-  background: $insBackground;
-  color: $insText;
+  background: #ff9;
+  color: #000;
   text-decoration: none;
 }
 mark {
-  background: $markBackground;
-  color: $markText;
+  background: #ff0;
+  color: #000;
   font-style: italic;
   font-weight: bold;
 }
