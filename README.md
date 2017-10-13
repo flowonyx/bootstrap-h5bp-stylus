@@ -1,4 +1,6 @@
-#Twitter Bootstrap 2.0.1 with HTML5 Boilerplate 3.0 styles ported to Stylus
+# Twitter Bootstrap 2.0.1 with HTML5 Boilerplate 3.0 styles ported to Stylus
+
+## This project is not maintained (as you might notice). Bootstrap and HTML5 Boilerplate have moved on considerably from where this stopped tracking them. It is simply left here for what it's worth.
 
 All the credit goes to the [Twitter Bootstrap](https://github.com/twitter/bootstrap) and [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate) guys and gals as well as @visionmedia for [nib](https://github.com/visionmedia/nib).
 
